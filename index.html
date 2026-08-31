@@ -680,6 +680,54 @@
             text-align: center;
             font-size: 1rem;
         }
+        /* Layout ya Gridi na Kadi */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Ukubwa wa Picha */
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 12px 0 6px 0;
+  color: #0088cc;
+  font-size: 18px;
+}
+
+/* Kitufe cha View Gallery */
+.gallery-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 16px;
+  background-color: #0088cc;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+}
     </style>
 </head>
 <body>
