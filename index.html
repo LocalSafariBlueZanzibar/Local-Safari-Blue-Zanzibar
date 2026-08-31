@@ -645,7 +645,41 @@
             .modal-gallery-item img { height: 110px; }
             .activity-card img { height: 140px; }
         }
-        
+        .video-section {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .video-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .video-item {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            display: block;
+        }
+
+        .video-item .video-caption {
+            padding: 0.8rem 1rem;
+            font-weight: 600;
+            color: #1a2a3a;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
