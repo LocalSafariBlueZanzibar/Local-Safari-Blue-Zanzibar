@@ -723,40 +723,33 @@
   border-radius: 20px !important;
 }
 
-/* 1. Kupanua kisanduku cha Popup/Modal */
-.modal-content, 
-#galleryModal .modal-content,
-.modal-body {
-  width: 95% !important;
-  max-width: 450px !important;
-  padding: 15px !important;
-}
-
-/* 2. Kulazimisha picha zikae MOJA MOJA (Column 1) kuanzia juu kwenda chini */
-.gallery-grid, 
+/* FORCE SINGLE COLUMN & FULL WIDTH FOR GALLERY MODAL */
+div[class*="gallery"] div[class*="grid"],
+div[id*="gallery"] div[class*="grid"],
 .modal-body,
-#galleryGrid,
-.modal-content .grid {
+#galleryGrid {
   display: flex !important;
   flex-direction: column !important;
-  gap: 20px !important;
-}
-
-/* 3. Ongeza Ukubwa na Urefu wa Picha */
-.gallery-item, 
-.gallery-card,
-.modal-body > div {
+  align-items: center !important;
   width: 100% !important;
 }
 
-.gallery-item img, 
-.gallery-card img,
+/* Ongeza upana wa kadi na picha za ndani ya gallery */
+div[class*="gallery"] img,
+div[id*="gallery"] img,
 .modal-body img {
   width: 100% !important;
-  height: 280px !important; /* Urefu mkubwa wa picha */
+  min-width: 100% !important;
+  height: 280px !important;
   object-fit: cover !important;
   border-radius: 12px !important;
-  display: block !important;
+}
+
+/* Fanya kila kijisanduku cha picha kichukue kioo chote */
+div[class*="gallery"] > div,
+.modal-body > div {
+  width: 100% !important;
+  margin-bottom: 15px !important;
 }
 
     </style>
