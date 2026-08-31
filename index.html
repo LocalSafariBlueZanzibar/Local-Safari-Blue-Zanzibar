@@ -723,25 +723,26 @@
   border-radius: 20px !important;
 }
 
-/* Kulazimisha popup na picha za gallery kuwa kubwa zaidi */
+/* 1. Kupanua kisanduku cha Popup/Modal */
 .modal-content, 
 #galleryModal .modal-content,
-div[id*="modal"] {
+.modal-body {
   width: 95% !important;
   max-width: 450px !important;
-  padding: 10px !important;
+  padding: 15px !important;
 }
 
-/* Fanya picha zikae MOJA MOJA badala ya mbili mbili */
+/* 2. Kulazimisha picha zikae MOJA MOJA (Column 1) kuanzia juu kwenda chini */
 .gallery-grid, 
 .modal-body,
-#galleryGrid {
+#galleryGrid,
+.modal-content .grid {
   display: flex !important;
   flex-direction: column !important;
   gap: 20px !important;
 }
 
-/* Kulazimisha ukubwa wa picha na kadi za gallery */
+/* 3. Ongeza Ukubwa na Urefu wa Picha */
 .gallery-item, 
 .gallery-card,
 .modal-body > div {
@@ -752,9 +753,10 @@ div[id*="modal"] {
 .gallery-card img,
 .modal-body img {
   width: 100% !important;
-  height: 300px !important; /* Hapa ndipo urefu ulipoongezwa uwe mkubwa sana */
+  height: 280px !important; /* Urefu mkubwa wa picha */
   object-fit: cover !important;
   border-radius: 12px !important;
+  display: block !important;
 }
 
     </style>
