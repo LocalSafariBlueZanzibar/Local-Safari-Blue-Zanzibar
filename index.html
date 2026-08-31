@@ -723,30 +723,38 @@
   border-radius: 20px !important;
 }
 
-/* 1. upana wa popup/modal iwe kubwa zaidi kwenye simu */
+/* Kulazimisha popup na picha za gallery kuwa kubwa zaidi */
 .modal-content, 
-.gallery-modal {
-  max-width: 90% !important; /* Inafanya popup ichukue nafasi kubwa ya kioo */
-  width: 500px !important;
-  padding: 20px !important;
+#galleryModal .modal-content,
+div[id*="modal"] {
+  width: 95% !important;
+  max-width: 450px !important;
+  padding: 10px !important;
 }
 
-/* 2. ukubwa wa picha za ndani ya Gallery Modal */
-.modal-body img,
-.gallery-modal img,
-.gallery-item img {
+/* Fanya picha zikae MOJA MOJA badala ya mbili mbili */
+.gallery-grid, 
+.modal-body,
+#galleryGrid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+/* Kulazimisha ukubwa wa picha na kadi za gallery */
+.gallery-item, 
+.gallery-card,
+.modal-body > div {
   width: 100% !important;
-  height: 220px !important; /* Ongeza urefu wa picha za ndani */
-  object-fit: cover !important;
-  border-radius: 10px !important;
 }
 
-/* 3. Weka picha zikae safi 1 au 2 kwa safu (Grid) */
-.gallery-grid-modal,
-.modal-body {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
-  gap: 15px !important;
+.gallery-item img, 
+.gallery-card img,
+.modal-body img {
+  width: 100% !important;
+  height: 300px !important; /* Hapa ndipo urefu ulipoongezwa uwe mkubwa sana */
+  object-fit: cover !important;
+  border-radius: 12px !important;
 }
 
     </style>
