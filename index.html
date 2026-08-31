@@ -680,54 +680,51 @@
             text-align: center;
             font-size: 1rem;
         }
-        /* Layout ya Gridi na Kadi */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 15px;
+        /* Kulazimisha ukubwa wa picha na layout ya ziada */
+.activities {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 20px !important;
+  padding: 15px !important;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.activity-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  text-align: center !important;
+  cursor: pointer !important;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+/* Ukubwa wa Picha Mkubwa Zaidi */
+.activity-card img {
+  width: 100% !important;
+  height: 280px !important; /* Hapa ndipo urefu wa picha ulipoongezwa */
+  object-fit: cover !important;
+  display: block !important;
 }
 
-/* Ukubwa wa Picha */
-.card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-.card h3 {
-  margin: 12px 0 6px 0;
-  color: #0088cc;
-  font-size: 18px;
+.activity-card h3 {
+  margin: 12px 0 6px 0 !important;
+  color: #0088cc !important;
+  font-size: 18px !important;
 }
 
 /* Kitufe cha View Gallery */
 .gallery-btn {
-  display: inline-block;
-  margin-bottom: 15px;
-  padding: 6px 16px;
-  background-color: #0088cc;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 20px;
+  display: inline-block !important;
+  margin-bottom: 15px !important;
+  padding: 6px 16px !important;
+  background-color: #0088cc !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
 }
+
+
+
     </style>
 </head>
 <body>
@@ -741,42 +738,59 @@
             Book on WhatsApp
         </a>
     </header>
+<!-- ===== ACTIVITIES ===== -->
+<section class="activities">
+  
+  <div class="activity-card" data-activity="Blue Lagoon">
+    <img src="20260401_135813.jpg" alt="Blue Lagoon" />
+    <h3>Blue Lagoon</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
 
-    <!-- ===== ACTIVITIES ===== -->
-    <section class="activities">
-        <div class="activity-card" data-activity="Blue Lagoon">
-            <img src="20260401_135813.jpg" alt="Blue Lagoon" />
-            <h3>Blue Lagoon</h3>
-        </div>
-        <div class="activity-card" data-activity="Snorkeling">
-            <img src="snorkeling-on-zanzibar.jpg" alt="Snorkeling" />
-            <h3>Snorkeling</h3>
-        </div>
-        <div class="activity-card" data-activity="Boat Trip">
-            <img src="mnemba-full-day.jpg" alt="Boat Trip" />
-            <h3>Boat Trip</h3>
-        </div>
-        <div class="activity-card" data-activity="Sandbank">
-            <img src="IMG-20260730-WA0003.jpg" alt="Sandbank" />
-            <h3>Sandbank</h3>
-        </div>
-        <div class="activity-card" data-activity="Seafood Lunch">
-            <img src="149ff9e8143a46169bdefd7e7a4ed6d4.jpg" alt="Seafood Lunch" />
-            <h3>Seafood Lunch</h3>
-        </div>
-        <div class="activity-card" data-activity="Dolphins">
-            <img src="dolphin-tour-with-snorkeling-at-mnemba-island-zanzibar_XXbPd.jpeg" alt="Dolphins" />
-            <h3>Dolphins</h3>
-        </div>
-        <div class="activity-card" data-activity="Kwale Island">
-            <img src="AERIAL-SANDBAR-HD-no-W-1z.jpg" alt="Kwale Island" />
-            <h3>Island Kwale</h3>
-        </div>
-        <div class="activity-card" data-activity="Fruits">
-            <img src="5e.jpg" alt="Fruits" />
-            <h3>Fruits</h3>
-        </div>
-    </section>
+  <div class="activity-card" data-activity="Snorkeling">
+    <img src="snorkeling-on-zanzibar.jpg" alt="Snorkeling" />
+    <h3>Snorkeling</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Boat Trip">
+    <img src="mnemba-full-day.jpg" alt="Boat Trip" />
+    <h3>Boat Trip</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Sandbank">
+    <img src="IMG-20260730-WA0003.jpg" alt="Sandbank" />
+    <h3>Sandbank</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Seafood Lunch">
+    <img src="149ff9e8143a46169bdefd7e7a4ed6d4.jpg" alt="Seafood Lunch" />
+    <h3>Seafood Lunch</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Dolphins">
+    <img src="dolphin-tour-with-snorkeling-at-mnemba-island-zanzibar_XXbPd.jpeg" alt="Dolphins" />
+    <h3>Dolphins</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Kwale Island">
+    <img src="AERIAL-SANDBAR-HD-no-W-1z.jpg" alt="Kwale Island" />
+    <h3>Island Kwale</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+  <div class="activity-card" data-activity="Fruits">
+    <img src="5e.jpg" alt="Fruits" />
+    <h3>Fruits</h3>
+    <span class="gallery-btn">📸 View Gallery</span>
+  </div>
+
+</section>
+    
 
     <!-- ===== BOOKING ===== -->
     <section class="booking">
