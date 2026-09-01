@@ -1315,41 +1315,46 @@ div[class*="gallery"] > div,
             if (e.target === this) closeFeedbackModal();
         });
 
-        // Function to handle Firebase logging and WhatsApp redirection
+ // Function ya kutuma taarifa Firestore na kufungua WhatsApp
 function sendToFirebaseAndWhatsApp(type) {
-  // 1. WEKA NAMBA YAKO HALISI HAPA (Bila alama ya +)
+    
   const phoneNumber = "255772425433"; 
 
   const currentTime = new Date().toLocaleString();
+  
   let message = "";
-  let firebaseFolder = "";
+  let collectionName = "";
 
   if (type === 'booking') {
     message = "Hello Local Safari Blue Zanzibar! I would like to book a Safari Blue tour.";
-    firebaseFolder = "whatsapp_bookings";
+    collectionName = "whatsapp_bookings";
   } else {
     message = "Hello Local Safari Blue Zanzibar! I would like to get more information.";
-    firebaseFolder = "whatsapp_chats";
+    collectionName = "whatsapp_chats";
   }
 
-  // Tengeneza link ya WhatsApp
+  // 2. Mpeleke mteja WhatsApp mara moja bila kusubiri
   const whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-  // 2. KUFUNGUA WHATSAPP MOJA KWA MOJA
   window.open(whatsappUrl, '_blank');
 
-  // 3. HIFADHI TAARIFA FIREBASE NYUMA YA PAZIA (BACKGROUND)
+  // 3. Hifadhi taarifa kwenye Cloud Firestore (nyuma ya pazia)
   try {
-    if (typeof firebase !== 'undefined' && firebase.database) {
-      firebase.database().ref(firebaseFolder).push({
+    if (typeof firebase !== 'undefined' && firebase.firestore) {
+      firebase.firestore().collection(collectionName).add({
         actionType: type === 'booking' ? "Direct Booking Attempt" : "General Inquiry (Chat)",
-        timestamp: currentTime
+        timestamp: currentTime,
+        device: navigator.userAgent
+      }).then(() => {
+        console.log("Firestore Log Success!");
+      }).catch((err) => {
+        console.log("Firestore Log Error:", err);
       });
     }
   } catch (e) {
-    console.log("Firebase Log Error:", e);
+    console.log("Firestore Execution Error:", e);
   }
-}
+}       // Function to handle Firebase logging and WhatsApp redirection
+
     </script>
 </body>
 </html>
