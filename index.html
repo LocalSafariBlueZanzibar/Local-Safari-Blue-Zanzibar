@@ -1317,38 +1317,37 @@ div[class*="gallery"] > div,
 
         // Function to handle Firebase logging and WhatsApp redirection
 function sendToFirebaseAndWhatsApp(type) {
-  const phoneNumber = "255772425433;
-  const currentTime = new Date().toLocaleString();
+  // 1. WEKA NAMBA YAKO HALISI HAPA (Bila alama ya +)
+  const phoneNumber = "255772425433"; 
 
-  let message = "Hello Local Safari Blue Zanzibar! I would like to get more information.";
-  let firebaseFolder = "whatsapp_chats";
+  const currentTime = new Date().toLocaleString();
+  let message = "";
+  let firebaseFolder = "";
 
   if (type === 'booking') {
     message = "Hello Local Safari Blue Zanzibar! I would like to book a Safari Blue tour.";
     firebaseFolder = "whatsapp_bookings";
+  } else {
+    message = "Hello Local Safari Blue Zanzibar! I would like to get more information.";
+    firebaseFolder = "whatsapp_chats";
   }
 
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  // Tengeneza link ya WhatsApp
+  const whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
-  // Hifadhi taarifa Firebase na ufungue WhatsApp
+  // 2. KUFUNGUA WHATSAPP MOJA KWA MOJA
+  window.open(whatsappUrl, '_blank');
+
+  // 3. HIFADHI TAARIFA FIREBASE NYUMA YA PAZIA (BACKGROUND)
   try {
     if (typeof firebase !== 'undefined' && firebase.database) {
       firebase.database().ref(firebaseFolder).push({
         actionType: type === 'booking' ? "Direct Booking Attempt" : "General Inquiry (Chat)",
-        timestamp: currentTime,
-        device: navigator.userAgent
-      }).then(() => {
-        window.open(whatsappUrl, '_blank');
-      }).catch((err) => {
-        console.log("Firebase error:", err);
-        window.open(whatsappUrl, '_blank');
+        timestamp: currentTime
       });
-    } else {
-      window.open(whatsappUrl, '_blank');
     }
   } catch (e) {
-    console.log("Error:", e);
-    window.open(whatsappUrl, '_blank');
+    console.log("Firebase Log Error:", e);
   }
 }
     </script>
