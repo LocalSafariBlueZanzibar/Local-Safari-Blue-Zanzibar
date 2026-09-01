@@ -1024,6 +1024,33 @@ div[class*="gallery"] > div,
             appId: "1:158196877112:web:be2ac8dd14e00beef9e3cd",
             measurementId: "G-D44SM79P3Q"
         };
+        //KUHUSU MTU AKIBONYEZA TU BTN WHATSAPP 
+        window.sendToFirebaseAndWhatsApp = async function(type) {
+  const phoneNumber = "255772425433"; 
+  const currentTime = new Date().toLocaleString();
+
+  let message = type === 'booking' 
+    ? "Hello Local Safari Blue Zanzibar! I would like to book a Safari Blue tour."
+    : "Hello Local Safari Blue Zanzibar! I would like to get more information.";
+
+  let collectionName = type === 'booking' ? "whatsapp_bookings" : "whatsapp_chats";
+
+  // 1. Fungua WhatsApp mara moja
+  const whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+  window.open(whatsappUrl, '_blank');
+
+  // 2. Hifadhi kwenye Cloud Firestore
+  try {
+    await addDoc(collection(db, collectionName), {
+      actionType: type === 'booking' ? "Direct Booking Attempt" : "General Inquiry (Chat)",
+      timestamp: currentTime,
+      device: navigator.userAgent
+    });
+    console.log("Data saved to Firestore!");
+  } catch (error) {
+    console.error("Firestore Error:", error);
+  }
+};
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
@@ -1314,46 +1341,6 @@ div[class*="gallery"] > div,
         document.getElementById('feedbackModal').addEventListener('click', function(e) {
             if (e.target === this) closeFeedbackModal();
         });
-
- // Function ya kutuma taarifa Firestore na kufungua WhatsApp
-function sendToFirebaseAndWhatsApp(type) {
-    
-  const phoneNumber = "255772425433"; 
-
-  const currentTime = new Date().toLocaleString();
-  
-  let message = "";
-  let collectionName = "";
-
-  if (type === 'booking') {
-    message = "Hello Local Safari Blue Zanzibar! I would like to book a Safari Blue tour.";
-    collectionName = "whatsapp_bookings";
-  } else {
-    message = "Hello Local Safari Blue Zanzibar! I would like to get more information.";
-    collectionName = "whatsapp_chats";
-  }
-
-  // 2. Mpeleke mteja WhatsApp mara moja bila kusubiri
-  const whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-  window.open(whatsappUrl, '_blank');
-
-  // 3. Hifadhi taarifa kwenye Cloud Firestore (nyuma ya pazia)
-  try {
-    if (typeof firebase !== 'undefined' && firebase.firestore) {
-      firebase.firestore().collection(collectionName).add({
-        actionType: type === 'booking' ? "Direct Booking Attempt" : "General Inquiry (Chat)",
-        timestamp: currentTime,
-        device: navigator.userAgent
-      }).then(() => {
-        console.log("Firestore Log Success!");
-      }).catch((err) => {
-        console.log("Firestore Log Error:", err);
-      });
-    }
-  } catch (e) {
-    console.log("Firestore Execution Error:", e);
-  }
-}       // Function to handle Firebase logging and WhatsApp redirection
 
     </script>
 </body>
