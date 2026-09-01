@@ -1296,6 +1296,57 @@ div[class*="gallery"] > div,
         document.getElementById('feedbackModal').addEventListener('click', function(e) {
             if (e.target === this) closeFeedbackModal();
         });
+
+        // Function to handle Firebase logging and WhatsApp redirection
+function sendToFirebaseAndWhatsApp(type) {
+  // Replace with your actual WhatsApp phone number (in international format without +)
+  const phoneNumber = "255772425433"; 
+  
+  // Get current timestamp
+  const currentTime = new Date().toLocaleString();
+
+  let firebaseFolder = "";
+  let message = "";
+  let dataToSave = {};
+
+  if (type === 'chat') {
+    // Data configuration for Chat Inquiry
+    firebaseFolder = "whatsapp_chats";
+    message = "Hello Local Safari Blue Zanzibar! I would like to get more information about your tours.";
+    
+    dataToSave = {
+      actionType: "General Inquiry (Chat)",
+      timestamp: currentTime,
+      device: navigator.userAgent
+    };
+
+  } else if (type === 'booking') {
+    // Data configuration for Tour Booking
+    firebaseFolder = "whatsapp_bookings";
+    message = "Hello Local Safari Blue Zanzibar! I would like to book a Safari Blue tour.";
+    
+    dataToSave = {
+      actionType: "Direct Booking Attempt",
+      timestamp: currentTime,
+      status: "Initiated via WhatsApp"
+    };
+  }
+
+  // 1. Save data to Firebase Realtime Database
+  firebase.database().ref(firebaseFolder).push(dataToSave)
+    .then(() => {
+      console.log("Data saved to Firebase successfully!");
+      // 2. Redirect user to WhatsApp
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    })
+    .catch((error) => {
+      console.error("Firebase Error:", error);
+      // Fallback: Redirect to WhatsApp even if Firebase encounters an error
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    });
+}
     </script>
 </body>
 </html>
