@@ -776,6 +776,26 @@ div[class*="gallery"] > div,
 .booking-btn:hover, .whatsapp-btn:hover {
   background-color: #128C7E !important;
 }
+      .date-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.date-placeholder {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #757575;
+  pointer-events: none; /* mguso kupita moja kwa moja kwenda kwenye date input */
+  font-size: 14px;
+}
+
+/* Ukishachagua tarehe au ukibonyeza, ficha placeholder */
+.date-input-wrapper input[type="date"]:focus + .date-placeholder,
+.date-input-wrapper input[type="date"]:valid + .date-placeholder {
+  display: none;
+}
 
     </style>
 </head>
