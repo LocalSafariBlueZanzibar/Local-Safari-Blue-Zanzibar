@@ -781,22 +781,29 @@ div[class*="gallery"] > div,
   width: 100%;
 }
 
+
+.date-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
 .date-placeholder {
   position: absolute;
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
   color: #757575;
-  pointer-events: none; /* mguso kupita moja kwa moja kwenda kwenye date input */
+  pointer-events: none;
   font-size: 14px;
+  z-index: 2;
 }
 
-/* Ukishachagua tarehe au ukibonyeza, ficha placeholder */
+/* Ficha maneno ya tarehe ikichaguliwa au kisanduku kinapobonyezwa */
 .date-input-wrapper input[type="date"]:focus + .date-placeholder,
 .date-input-wrapper input[type="date"]:valid + .date-placeholder {
   display: none;
 }
-
     </style>
 </head>
 <body>
