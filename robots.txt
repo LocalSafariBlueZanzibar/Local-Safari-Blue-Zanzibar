@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://localsafaribluezanzibar.github.io/Local-Safari-Blue-Zanzibar/sitemap.xml
