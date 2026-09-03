@@ -808,6 +808,17 @@ div[class*="gallery"] > div,
 .date-input-wrapper input[type="date"]:valid + .date-placeholder {
   display: none;
 }
+      /* Inahakikisha placeholder inaonekana vizuri kabla tarehe haijachaguliwa */
+input[type="date"]:invalid:before {
+  content: "Your Booking Date";
+  color: #6c757d;
+  width: 100%;
+}
+
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
     </style>
 </head>
 <body>
@@ -882,7 +893,7 @@ div[class*="gallery"] > div,
             <input type="text" id="bookName" placeholder="Your Name" required />
             <input type="email" id="bookEmail" placeholder="Your Email" required />
             <input type="tel" id="bookPhone" placeholder="Phone Number (WhatsApp)" required />
-            <input type="text" id="bookDate" placeholder="Your Booking Date" onfocus="this.type='date'; try{this.showPicker()}catch(e){}" onblur="if(!this.value)this.type='text'" required />
+            <input type="date" id="bookDate" required />
 </div>
             <textarea id="bookMessage" placeholder="Message (e.g. number of people, hotel name...)" rows="3"></textarea>
             <button type="submit" id="bookSubmitBtn">Submit Booking</button>
