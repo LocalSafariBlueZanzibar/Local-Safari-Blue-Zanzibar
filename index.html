@@ -1070,43 +1070,66 @@ input[type="date"]:valid:before {
 
         // 1. BOOKING FORM (Saves to Firebase + Mailto Email)
         document.getElementById('bookingForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('bookSubmitBtn');
-            btn.disabled = true;
-            btn.innerText = "Submitting...";
+  e.preventDefault();
 
-            const name = document.getElementById('bookName').value;
-            const email = document.getElementById('bookEmail').value;
-            const phone = document.getElementById('bookPhone').value;
-            const date = document.getElementById('bookDate').value;
-            const message = document.getElementById('bookMessage').value;
+  const btn = document.getElementById('bookSubmitBtn');
+  const statusDiv = document.getElementById('bookingStatus');
 
-            try {
-                // Save to Firebase
-                await addDoc(collection(db, "bookings"), {
-                    fullName: name,
-                    email: email,
-                    phone: phone,
-                    tourDate: date,
-                    specialRequests: message,
-                    createdAt: serverTimestamp()
-                });
+  btn.disabled = true;
+  btn.innerText = "Submitting...";
+  if (statusDiv) statusDiv.style.display = "none";
 
-                // Trigger Email via Mailto
-                const adminEmail = 'aliminshwyswideeq@gmail.com';
-                const subject = `New Booking Request from ${name}`;
-                const body = `New Booking Request%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ADate: ${date}%0AMessage: ${message}`;
-                window.open(`mailto:${adminEmail}?subject=${encodeURIComponent(subject)}&body=${body}`, '_blank');
+  const name = document.getElementById('bookName').value.trim();
+  const email = document.getElementById('bookEmail').value.trim();
+  const phone = document.getElementById('bookPhone').value.trim();
+  const date = document.getElementById('bookDate').value;
+  const message = document.getElementById('bookMessage').value.trim();
 
-                alert('✅ Booking request sent! We will contact you shortly.');
-                this.reset();
-            } catch (err) {
-                alert('Error saving booking: ' + err.message);
-            } finally {
-                btn.disabled = false;
-                btn.innerText = "Submit Booking";
-            }
-        });
+  try {
+    // 1. Save to Firebase
+    await addDoc(collection(db, "bookings"), {
+      fullName: name,
+      email: email,
+      phone: phone,
+      tourDate: date,
+      specialRequests: message,
+      createdAt: serverTimestamp()
+    });
+
+    // 2. Trigger Email via EmailJS (Inatuma kimya kimya bila kufungua App)
+    await emailjs.send("service_vffih1p", "template_4zzypuc", {
+      from_name: name,
+      from_email: email,
+      phone_number: phone,
+      booking_date: date,
+      message: message
+    });
+
+    // 3. Onyesha Ujumbe wa Mafanikio
+    if (statusDiv) {
+      statusDiv.style.display = "block";
+      statusDiv.style.color = "#28a745";
+      statusDiv.innerHTML = `🎉 Thank you, <strong>${name}</strong>! Your booking request has been successfully submitted.`;
+    } else {
+      alert('✅ Booking request sent! We will contact you shortly.');
+    }
+
+    this.reset();
+
+  } catch (err) {
+    console.error("Booking Error:", err);
+    if (statusDiv) {
+      statusDiv.style.display = "block";
+      statusDiv.style.color = "#d9534f";
+      statusDiv.innerHTML = "❌ Error submitting booking: " + err.message;
+    } else {
+      alert('Error saving booking: ' + err.message);
+    }
+  } finally {
+    btn.disabled = false;
+    btn.innerText = "Submit Booking";
+  }
+});
 
         // 2. FEEDBACK DATA (Load from Firebase)
         window.loadFeedbacks = async function() {
