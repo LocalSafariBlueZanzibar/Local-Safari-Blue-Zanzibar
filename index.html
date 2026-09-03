@@ -14,12 +14,14 @@
   <meta property="og:title" content="Local Safari Blue Zanzibar Tour" />
   <meta property="og:description" content="Experience the best day trip in Zanzibar. Direct WhatsApp booking with local guides." />
   <meta property="og:image" content="https://localsafaribluezanzibar.github.io/Local-Safari-Blue-Zanzibar/favicon.jpeg" />
+  
  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   (function(){
-      emailjs.init("user_a1b2c3d4e5f6g7h8"); // Public Key yako hapa ndani ya quotes
+      emailjs.init("WEKA_PUBLIC_KEY_YAKO_HALISI");
   })();
-</script> 
+</script>
+ 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
@@ -894,14 +896,18 @@ input[type="date"]:valid:before {
     <!-- ===== BOOKING ===== -->
     <section class="booking">
         <h2>Book Your Local Safari Blue Tour</h2>
-        <form id="bookingForm">
-            <input type="text" id="bookName" placeholder="Your Name" required />
-            <input type="email" id="bookEmail" placeholder="Your Email" required />
-            <input type="tel" id="bookPhone" placeholder="Phone Number (WhatsApp)" required />
-            <input type="date" id="bookDate" name="booking_date" required />
-</div>
-            <textarea id="bookMessage" placeholder="Message (e.g. number of people, hotel name...)" rows="3"></textarea>
-            <button type="submit" id="bookSubmitBtn">Submit Booking</button>
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+  <input type="text" id="bookName" placeholder="Your Name" required />
+  <input type="email" id="bookEmail" placeholder="Your Email" required />
+  <input type="tel" id="bookPhone" placeholder="Phone Number (WhatsApp)" required />
+  <input type="date" id="bookDate" required />
+  <textarea id="bookMessage" placeholder="Message (e.g. number of people, hotel name...)" rows="3"></textarea>
+
+  <button type="submit" id="bookSubmitBtn">Submit Booking</button>
+
+  <!-- Eneo la kuonyesha ujumbe wa majibu -->
+  <div id="bookingStatus" style="margin-top: 15px; font-weight: bold; display: none;"></div>
+</form>
         </form>
 
         <div class="booking-info">
