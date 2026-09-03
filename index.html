@@ -882,9 +882,7 @@ div[class*="gallery"] > div,
             <input type="text" id="bookName" placeholder="Your Name" required />
             <input type="email" id="bookEmail" placeholder="Your Email" required />
             <input type="tel" id="bookPhone" placeholder="Phone Number (WhatsApp)" required />
-            <div class="date-input-wrapper">
-  <input type="date" id="bookDate" required />
-  <span class="date-placeholder">Your Booking Date</span>
+            <input type="text" id="bookDate" placeholder="Your Booking Date" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'" required />
 </div>
             <textarea id="bookMessage" placeholder="Message (e.g. number of people, hotel name...)" rows="3"></textarea>
             <button type="submit" id="bookSubmitBtn">Submit Booking</button>
