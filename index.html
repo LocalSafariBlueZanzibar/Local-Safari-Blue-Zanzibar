@@ -18,7 +18,7 @@
  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
   (function(){
-      emailjs.init("WEKA_PUBLIC_KEY_YAKO_HALISI");
+      emailjs.init("H6m0WgLRx9RIR03EX");
   })();
 </script>
  
@@ -1395,7 +1395,7 @@ input[type="date"]:valid:before {
   db.collection("bookings").add(bookingData)
     .then(() => {
       // 4. Tuma Email kupitia EmailJS
-      return emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      return emailjs.send("service_vffih1p", "template_4zzypuc", {
         from_name: name,
         from_email: email,
         phone_number: phone,
