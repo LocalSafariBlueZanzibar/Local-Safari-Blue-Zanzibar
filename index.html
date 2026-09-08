@@ -832,6 +832,7 @@ input[type="date"]:valid:before {
 }
 
    /* === STYLES ZA FAQ ACCORDION === */
+ /* === STYLES MPYA ZA FAQ ACCORDION (CONTRAST SAHIHI) === */
 .faq-section {
   max-width: 800px;
   margin: 40px auto;
@@ -842,20 +843,23 @@ input[type="date"]:valid:before {
 .faq-section h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #ffffff;
+  color: #0d1b2a; /* Rangi ya giza ili ionekane vizuri */
+  font-size: 1.5rem;
 }
 
 .faq-item {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #ffffff; /* Box la rangi nyeupe kabisa */
+  border: 1px solid #d0d7de; /* Ukuta wa box wa rangi ya kijivu */
   border-radius: 8px;
   margin-bottom: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Kivuli kidogo ili kijitokeze */
   transition: all 0.3s ease;
 }
 
 .faq-item[open] {
-  background-color: rgba(255, 255, 255, 0.18);
+  background-color: #f8f9fa; /* Rangi ya ndani ikifunguka */
+  border-color: #007bff; /* Mstari wa bluu ikifunguka */
 }
 
 .faq-question {
@@ -863,30 +867,33 @@ input[type="date"]:valid:before {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  color: #ffffff;
-  list-style: none; /* Inaondoa mshale wa asili wa browser */
+  color: #1a252f; /* Maandishi ya giza yanayoonekana kwa urahisi */
+  list-style: none;
   position: relative;
 }
 
-/* Inaweka alama ya + inayobadilika kuwa - ukifungua */
 .faq-question::after {
   content: '+';
   position: absolute;
   right: 20px;
   font-size: 1.3rem;
+  color: #007bff; /* Alama ya plus ya bluu */
   transition: transform 0.2s ease;
 }
 
 .faq-item[open] .faq-question::after {
   content: '−';
+  color: #d9534f;
 }
 
 .faq-answer {
   padding: 0 20px 16px 20px;
-  color: #e0e0e0;
+  color: #333333; /* Maandishi ya giza ya majibu */
   line-height: 1.6;
   font-size: 0.98rem;
-}   
+  border-top: 1px solid #e9ecef;
+  padding-top: 12px;
+}
     </style>
 </head>
 <body>
