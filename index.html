@@ -830,6 +830,63 @@ input[type="date"]:focus:before,
 input[type="date"]:valid:before {
   content: "";
 }
+
+   /* === STYLES ZA FAQ ACCORDION === */
+.faq-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.faq-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.faq-question {
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ffffff;
+  list-style: none; /* Inaondoa mshale wa asili wa browser */
+  position: relative;
+}
+
+/* Inaweka alama ya + inayobadilika kuwa - ukifungua */
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 20px 16px 20px;
+  color: #e0e0e0;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}   
     </style>
 </head>
 <body>
@@ -1009,7 +1066,43 @@ input[type="date"]:valid:before {
             <div class="modal-gallery-grid" id="modalGrid"></div>
         </div>
     </div>
+<!-- === SEHEMU YA FAQ & HISTORIA (ACCORDION) === -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions & About Us</h2>
 
+  <!-- Swali / Maelezo ya 1: Historia -->
+  <details class="faq-item">
+    <summary class="faq-question">About Us & Our History</summary>
+    <div class="faq-answer">
+      <p>Local Safari Blue Zanzibar was founded to offer authentic, high-quality, and memorable ocean excursions in Zanzibar. We specialize in guided boat tours, snorkeling at coral reefs, visiting pristine sandbanks, and exploring hidden mangrove lagoons with experienced local guides.</p>
+    </div>
+  </details>
+
+  <!-- Swali / Maelezo ya 2 -->
+  <details class="faq-item">
+    <summary class="faq-question">What is included in the Safari Blue trip?</summary>
+    <div class="faq-answer">
+      <p>Our package includes a seafood BBQ lunch (fish, lobster, calamari), fresh tropical fruits, soft drinks, snorkeling gear (mask & fins), and experienced local tour guides throughout the day.</p>
+    </div>
+  </details>
+
+  <!-- Swali / Maelezo ya 3 -->
+  <details class="faq-item">
+    <summary class="faq-question">What time does the tour start and end?</summary>
+    <div class="faq-answer">
+      <p>The trip typically starts around 8:30 AM or 9:00 AM in the morning and finishes between 4:00 PM and 4:30 PM in the evening.</p>
+    </div>
+  </details>
+
+  <!-- Swali / Maelezo ya 4 -->
+  <details class="faq-item">
+    <summary class="faq-question">What should I bring with me?</summary>
+    <div class="faq-answer">
+      <p>We recommend bringing swimwear, sunblock/sunscreen, a towel, water shoes, waterproof bags, and a camera or phone for photos.</p>
+    </div>
+  </details>
+</section>
+  
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-content">
