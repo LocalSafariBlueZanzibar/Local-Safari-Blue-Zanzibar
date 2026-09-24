@@ -278,6 +278,27 @@ a{color:inherit}
 @media (max-width:900px){.booking-grid{grid-template-columns:1fr}.video-card iframe{height:360px}}
 @media (max-width:768px){.nav-links{position:fixed;top:0;right:-100%;height:100vh;width:70%;max-width:320px;background:#fff;flex-direction:column;padding:90px 30px;gap:22px;box-shadow:-8px 0 30px rgba(0,0,0,.15);transition:right .35s}.nav-links.open{right:0}.nav-links a{color:var(--ocean-deep)!important;font-size:1.05rem}.nav-toggle{display:block;z-index:1001}.trust-strip{margin:20px;padding:22px}.section{padding:60px 5%}.booking-wrap{padding:40px 6%}.video-card iframe{height:260px}.hero{min-height:560px}.hero-ctas{flex-direction:column;width:100%;max-width:300px}.btn{justify-content:center;width:100%}.modal-content{padding:22px}.modal-gallery-grid{grid-template-columns:repeat(2,1fr)}.modal-gallery-item img{height:130px}.nav-brand img{width:38px;height:38px}.hero-logo{width:100px;height:100px}.footer-logo{width:72px;height:72px}.about-logo{width:88px;height:88px}}
 @media (max-width:480px){.activities{grid-template-columns:1fr}.activity-card img{height:220px}.floating-wa{width:52px;height:52px;font-size:1.4rem;bottom:18px;right:18px}}
+
+ 
+/* Fix: Kubwa picha kwenye View Gallery - inashinda codes za mwanzo */
+.modal-gallery-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) !important;
+  gap:20px !important;
+}
+.modal-gallery-item img{
+  width:100% !important;
+  height:300px !important;
+  object-fit:cover !important;
+}
+@media (max-width:768px){
+  .modal-gallery-grid{
+    grid-template-columns:1fr !important;
+  }
+  .modal-gallery-item img{
+    height:270px !important;
+  }
+} 
 </style>
 </head>
 <body>
