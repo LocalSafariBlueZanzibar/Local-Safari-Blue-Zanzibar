@@ -1,9 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 1. Ukurasa Mkuu (Homepage) -->
   <url>
     <loc>https://authenticdhowexpeditions.com/</loc>
-    <lastmod>2026-09-23</lastmod>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/hero-dhow.jpg</image:loc>
+      <image:title>Authentic Dhow Expeditions Zanzibar</image:title>
+      <image:caption>Traditional wooden dhow sailing in Menai Bay, Zanzibar</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/blue-lagoon.jpg</image:loc>
+      <image:title>Blue Lagoon View - Zanzibar Dhow Tour</image:title>
+      <image:caption>Crystal clear waters of the Blue Lagoon, Menai Bay</image:caption>
+    </image:image>
   </url>
-</urlset>
 
+  <!-- 2. About Us -->
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#about</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 3. Experiences (Tours) -->
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#experiences</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/snorkeling.jpg</image:loc>
+      <image:title>Snorkeling in Menai Bay Conservation Area</image:title>
+      <image:caption>Guided snorkeling among vibrant coral gardens</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/kwale-island.jpg</image:loc>
+      <image:title>Kwale Island Seafood Feast</image:title>
+      <image:caption>Fresh seafood BBQ lunch on Kwale Island</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/sandbank.jpg</image:loc>
+      <image:title>Sandbank Relaxation - Zanzibar Dhow Safari</image:title>
+      <image:caption>Pristine sandbank stop during the dhow tour</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/seafood-feast.jpg</image:loc>
+      <image:title>Fresh Seafood Feast - Authentic Dhow Expeditions</image:title>
+      <image:caption>Line-caught BBQ with lobster, jumbo prawns, fish and calamari</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/dolphin-watching.jpg</image:loc>
+      <image:title>Dolphin Watching in Menai Bay</image:title>
+      <image:caption>Dolphin watching during the dhow cruise</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/tropical-fruits.jpg</image:loc>
+      <image:title>Fresh Tropical Fruits - Zanzibar Dhow Tour</image:title>
+      <image:caption>Fresh tropical fruits served on board</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Gallery -->
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#gallery</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/dhow-sunset.jpg</image:loc>
+      <image:title>Sunset Dhow Cruise Zanzibar</image:title>
+      <image:caption>Beautiful sunset views from the dhow</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://authenticdhowexpeditions.com/images/coral-reef.jpg</image:loc>
+      <image:title>Coral Reef - Menai Bay</image:title>
+      <image:caption>Vibrant coral reef teeming with marine life</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. FAQ -->
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#faq</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- 6. Terms & Privacy -->
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#terms</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://authenticdhowexpeditions.com/#privacy</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
