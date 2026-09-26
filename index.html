@@ -63,9 +63,75 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Authentic Dhow Expeditions","legalName":"Authentic Dhow Expeditions","url":"https://www.authenticdhowexpeditions.com/","logo":"https://www.authenticdhowexpeditions.com/logo.png","foundingDate":"2010","address":{"@type":"PostalAddress","streetAddress":"Fumba Village","addressLocality":"Fumba","addressRegion":"Zanzibar","postalCode":"72110","addressCountry":"TZ"},"contactPoint":[{"@type":"ContactPoint","telephone":"+255-772-425-433","contactType":"customer service","areaServed":"TZ","availableLanguage":["English","Swahili"]}],"sameAs":["https://www.instagram.com/authenticdhowexpeditions","https://www.facebook.com/authenticdhowexpeditions"]}
 </script>
 
-<!-- SCHEMA: TouristAttraction (Review-eligible — NOT LocalBusiness) -->
+<!-- SCHEMA: TouristAttraction (STATIC — Review-eligible) -->
 <script type="application/ld+json" id="businessSchema">
-{"@context":"https://schema.org","@type":"TouristAttraction","@id":"https://www.authenticdhowexpeditions.com/#business","name":"Authentic Dhow Expeditions","description":"Registered locally-owned dhow safari operator in Fumba Village, Zanzibar. Small-group snorkeling, Blue Lagoon, Kwale Island, sandbank and seafood lunch tours in Menai Bay Conservation Area since 2010.","url":"https://www.authenticdhowexpeditions.com/","image":["https://www.authenticdhowexpeditions.com/logo.png","https://www.authenticdhowexpeditions.com/20260401_135813.jpg"],"logo":"https://www.authenticdhowexpeditions.com/logo.png","telephone":"+255-772-425-433","email":"info@authenticdhowexpeditions.com","priceRange":"$$","currenciesAccepted":"USD, EUR, TZS","paymentAccepted":"Cash, Mobile Money, Card","address":{"@type":"PostalAddress","streetAddress":"Fumba Village","addressLocality":"Fumba","addressRegion":"Zanzibar","postalCode":"72110","addressCountry":"TZ"},"geo":{"@type":"GeoCoordinates","latitude":-6.3076,"longitude":39.2520},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"18:00"}],"touristType":["Adventure","Nature","Family","Snorkeling","Romantic"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"1","bestRating":"5","worstRating":"1"},"review":[{"@type":"Review","author":{"@type":"Person","name":"Guest"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Amazing experience","datePublished":"2026-09-26"}]}
+{
+  "@context": "https://schema.org",
+  "@type": "TouristAttraction",
+  "@id": "https://www.authenticdhowexpeditions.com/#business",
+  "name": "Authentic Dhow Expeditions",
+  "description": "Registered locally-owned dhow safari operator in Fumba Village, Zanzibar. Small-group snorkeling, Blue Lagoon, Kwale Island, sandbank and seafood lunch tours in Menai Bay Conservation Area since 2010.",
+  "url": "https://www.authenticdhowexpeditions.com/",
+  "image": [
+    "https://www.authenticdhowexpeditions.com/logo.png",
+    "https://www.authenticdhowexpeditions.com/20260401_135813.jpg",
+    "https://www.authenticdhowexpeditions.com/snorkeling-on-zanzibar.jpg"
+  ],
+  "logo": "https://www.authenticdhowexpeditions.com/logo.png",
+  "telephone": "+255-772-425-433",
+  "email": "info@authenticdhowexpeditions.com",
+  "priceRange": "$$",
+  "currenciesAccepted": "USD, EUR, TZS",
+  "paymentAccepted": "Cash, Mobile Money, Card",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Fumba Village",
+    "addressLocality": "Fumba",
+    "addressRegion": "Zanzibar",
+    "postalCode": "72110",
+    "addressCountry": "TZ"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -6.3076,
+    "longitude": 39.2520
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  }],
+  "touristType": ["Adventure","Nature","Family","Snorkeling","Romantic"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "TouristAttraction",
+        "name": "Authentic Dhow Expeditions"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Guest"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "reviewBody": "Amazing experience",
+      "datePublished": "2026-09-26"
+    }
+  ]
+}
 </script>
 
 <!-- SCHEMA: TouristTrip -->
@@ -712,7 +778,6 @@ window.loadFeedbacks = async function(){
     currentReviewPage = 0;
     renderReviewsCarousel();
     startReviewAutoRotate();
-    updateReviewsSchema();
   }catch(err){
     console.error(err);
     track.innerHTML = '<p class="reviews-loading">Error loading reviews.</p>';
@@ -780,30 +845,6 @@ function startReviewAutoRotate(){
 }
 function resetReviewTimer(){ startReviewAutoRotate(); }
 
-function updateReviewsSchema(){
-  const schemaEl = document.getElementById('businessSchema');
-  if(!schemaEl || !allFeedbacks.length) return;
-  const avg = allFeedbacks.reduce((sum,f)=>sum+(f.rating||5),0) / allFeedbacks.length;
-  const schema = JSON.parse(schemaEl.textContent);
-  // Ensure type is TouristAttraction (review-eligible)
-  schema["@type"] = "TouristAttraction";
-  schema.aggregateRating = {
-    "@type": "AggregateRating",
-    "ratingValue": avg.toFixed(1),
-    "reviewCount": allFeedbacks.length,
-    "bestRating": "5",
-    "worstRating": "1"
-  };
-  schema.review = allFeedbacks.slice(0,10).map(fb=>({
-    "@type": "Review",
-    "author": {"@type":"Person","name": fb.name || "Guest"},
-    "reviewRating": {"@type":"Rating","ratingValue": String(fb.rating || 5),"bestRating":"5"},
-    "reviewBody": fb.comment || "",
-    "datePublished": fb.createdAt?.toDate ? fb.createdAt.toDate().toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
-  }));
-  schemaEl.textContent = JSON.stringify(schema);
-}
-
 document.getElementById('feedbackForm').addEventListener('submit', async function(e){
   e.preventDefault();
   const btn = document.getElementById('fbSubmitBtn');
@@ -841,7 +882,6 @@ if(document.getElementById('reviewsTrack')){
   window.loadFeedbacks();
 }
 
-/* ============ ALL REVIEWS MODAL (inside module scope) ============ */
 window.openAllReviewsModal = function(){
   const modal = document.getElementById('allReviewsModal');
   const list = document.getElementById('allReviewsList');
