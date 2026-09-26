@@ -63,11 +63,11 @@
 {"@context":"https://schema.org","@type":"Organization","name":"Authentic Dhow Expeditions","legalName":"Authentic Dhow Expeditions","url":"https://www.authenticdhowexpeditions.com/","logo":"https://www.authenticdhowexpeditions.com/logo.png","foundingDate":"2010","address":{"@type":"PostalAddress","streetAddress":"Fumba Village","addressLocality":"Fumba","addressRegion":"Zanzibar","postalCode":"72110","addressCountry":"TZ"},"contactPoint":[{"@type":"ContactPoint","telephone":"+255-772-425-433","contactType":"customer service","areaServed":"TZ","availableLanguage":["English","Swahili"]}],"sameAs":["https://www.instagram.com/authenticdhowexpeditions","https://www.facebook.com/authenticdhowexpeditions"]}
 </script>
 
-<!-- SCHEMA: TouristAttraction (STATIC — Review-eligible) -->
+<!-- SCHEMA: LocalBusiness + TouristAttraction + Product (Review-eligible) -->
 <script type="application/ld+json" id="businessSchema">
 {
   "@context": "https://schema.org",
-  "@type": "TouristAttraction",
+  "@type": ["TouristAttraction", "LocalBusiness", "Product"],
   "@id": "https://www.authenticdhowexpeditions.com/#business",
   "name": "Authentic Dhow Expeditions",
   "description": "Registered locally-owned dhow safari operator in Fumba Village, Zanzibar. Small-group snorkeling, Blue Lagoon, Kwale Island, sandbank and seafood lunch tours in Menai Bay Conservation Area since 2010.",
@@ -103,6 +103,10 @@
     "closes": "18:00"
   }],
   "touristType": ["Adventure","Nature","Family","Snorkeling","Romantic"],
+  "brand": {
+    "@type": "Brand",
+    "name": "Authentic Dhow Expeditions"
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -113,10 +117,6 @@
   "review": [
     {
       "@type": "Review",
-      "itemReviewed": {
-        "@type": "TouristAttraction",
-        "name": "Authentic Dhow Expeditions"
-      },
       "author": {
         "@type": "Person",
         "name": "Guest"
