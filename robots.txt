@@ -1,7 +1,7 @@
 # ==================================================
 # robots.txt — Authentic Dhow Expeditions
 # https://www.authenticdhowexpeditions.com/
-# Last updated: September 26, 2026
+# Last updated: October 2, 2026
 # ==================================================
 
 # ---------- DEFAULT: ALLOW EVERYTHING ----------
@@ -12,9 +12,7 @@ Disallow: /private/
 Disallow: /tmp/
 Disallow: /*?q=
 Disallow: /*?s=
-Disallow: /*&
 Disallow: /*/print/
-Crawl-delay: 1
 
 # ---------- GOOGLE SEARCH ----------
 User-agent: Googlebot
@@ -40,19 +38,13 @@ Allow: /*.svg$
 User-agent: Googlebot-Video
 Allow: /
 
-# ---------- GOOGLE NEWS (future blog) ----------
-User-agent: Googlebot-News
-Allow: /
-
 # ---------- BING ----------
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 2
 
 # ---------- YANDEX ----------
 User-agent: YandexBot
 Allow: /
-Crawl-delay: 2
 
 # ---------- DUCKDUCKGO ----------
 User-agent: DuckDuckBot
@@ -82,9 +74,6 @@ User-agent: Pinterest
 Allow: /
 
 # ---------- AI CRAWLERS (for AI Overviews) ----------
-# These help your content appear in AI answers
-
-# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
@@ -94,11 +83,9 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# Google AI (Gemini, AI Overviews)
 User-agent: Google-Extended
 Allow: /
 
-# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
@@ -108,40 +95,20 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-# Common Crawl (used by many AI models)
 User-agent: CCBot
 Allow: /
 
-# Cohere
 User-agent: cohere-ai
 Allow: /
 
-# Meta AI
 User-agent: meta-externalagent
 Allow: /
 
-# Apple AI
 User-agent: Applebot-Extended
 Allow: /
 
-# ---------- BAD BOTS: BLOCK ----------
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Crawl-delay: 10
-
-User-agent: DotBot
-Crawl-delay: 10
-
-# ---------- SITEMAPS ----------
+# ---------- SITEMAP ----------
 Sitemap: https://www.authenticdhowexpeditions.com/sitemap.xml
-Sitemap: https://www.authenticdhowexpeditions.com/sitemap-images.xml
-Sitemap: https://www.authenticdhowexpeditions.com/sitemap-video.xml
