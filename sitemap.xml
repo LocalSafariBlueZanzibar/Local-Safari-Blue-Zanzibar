@@ -5,9 +5,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
 
-  <!-- ============================================
-       HOMEPAGE — Priority 1.0
-       ============================================ -->
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -89,9 +87,7 @@
 
   </url>
 
-  <!-- ============================================
-       GUIDE 1: Zanzibar Dhow Safari Guide — Priority 0.9
-       ============================================ -->
+  <!-- GUIDE 1: Dhow Safari Guide -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/zanzibar-dhow-safari-guide.html</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -108,9 +104,7 @@
     </image:image>
   </url>
 
-  <!-- ============================================
-       GUIDE 2: Best Time for a Dhow Safari — Priority 0.9
-       ============================================ -->
+  <!-- GUIDE 2: Best Time for a Dhow Safari -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/best-time-dhow-safari-zanzibar.html</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -127,9 +121,7 @@
     </image:image>
   </url>
 
-  <!-- ============================================
-       GUIDE 3: Kwale Island Guide — Priority 0.8
-       ============================================ -->
+  <!-- GUIDE 3: Kwale Island Guide -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/kwale-island-zanzibar-guide.html</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -146,9 +138,7 @@
     </image:image>
   </url>
 
-  <!-- ============================================
-       GUIDE 4: What to Pack — Priority 0.8
-       ============================================ -->
+  <!-- GUIDE 4: What to Pack -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/what-to-pack-dhow-safari-zanzibar.html</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -160,9 +150,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/what-to-pack-dhow-safari-zanzibar.html"/>
   </url>
 
-  <!-- ============================================
-       GUIDE 5: Dhow Safari Cost Guide — Priority 0.9
-       ============================================ -->
+  <!-- GUIDE 5: Dhow Safari Cost Guide -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/dhow-safari-cost-zanzibar.html</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -174,9 +162,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/dhow-safari-cost-zanzibar.html"/>
   </url>
 
-  <!-- ============================================
-       HOMEPAGE SECTIONS (anchors)
-       ============================================ -->
+  <!-- HOMEPAGE SECTIONS -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#activities</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
@@ -212,9 +198,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ============================================
-       LEGAL PAGES — Priority 0.3
-       ============================================ -->
+  <!-- LEGAL PAGES -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#legal-privacy</loc>
     <lastmod>2026-10-02T20:00:00+03:00</lastmod>
