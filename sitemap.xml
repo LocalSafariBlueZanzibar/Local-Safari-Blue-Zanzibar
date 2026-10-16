@@ -10,7 +10,7 @@
        ============================================ -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
@@ -29,7 +29,6 @@
       <image:loc>https://www.authenticdhowexpeditions.com/20260401_135813.jpg</image:loc>
       <image:title>Blue Lagoon Zanzibar — Turquoise Water at Menai Bay</image:title>
       <image:caption>Crystal-clear turquoise waters of the Blue Lagoon in Menai Bay Conservation Area, Zanzibar</image:caption>
-      <image:geo_location>Menai Bay, Fumba Village, Zanzibar, Tanzania</image:geo_location>
     </image:image>
 
     <image:image>
@@ -90,6 +89,83 @@
   </url>
 
   <!-- ============================================
+       NEW GUIDE: Zanzibar Dhow Safari FAQ — Priority 1.0
+       (Local Safari Blue Alternative)
+       ============================================ -->
+  <url>
+    <loc>https://www.authenticdhowexpeditions.com/zanzibar-dhow-safari-faq.html</loc>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.authenticdhowexpeditions.com/zanzibar-dhow-safari-faq.html"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://www.authenticdhowexpeditions.com/zanzibar-dhow-safari-faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/zanzibar-dhow-safari-faq.html"/>
+    <image:image>
+      <image:loc>https://www.authenticdhowexpeditions.com/20260401_135813.jpg</image:loc>
+      <image:title>Zanzibar Dhow Safari FAQ — 48 Questions Answered</image:title>
+      <image:caption>Answers to the most common questions about Zanzibar dhow safaris — booking, prices, safety, kids, food, pickup and how to find a local operator.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ============================================
+       NEW GUIDE: Fumba Village Zanzibar Guide — Priority 0.9
+       ============================================ -->
+  <url>
+    <loc>https://www.authenticdhowexpeditions.com/fumba-village-zanzibar-guide.html</loc>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.authenticdhowexpeditions.com/fumba-village-zanzibar-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://www.authenticdhowexpeditions.com/fumba-village-zanzibar-guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/fumba-village-zanzibar-guide.html"/>
+    <image:image>
+      <image:loc>https://www.authenticdhowexpeditions.com/20260705_085628.jpg</image:loc>
+      <image:title>Fumba Village Zanzibar — Home of the Dhow Tours</image:title>
+      <image:caption>Traditional dhows lining the shoreline at Fumba Village, Zanzibar</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ============================================
+       NEW GUIDE: Most Beautiful Islands Zanzibar — Priority 0.9
+       ============================================ -->
+  <url>
+    <loc>https://www.authenticdhowexpeditions.com/beautiful-islands-zanzibar.html</loc>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.authenticdhowexpeditions.com/beautiful-islands-zanzibar.html"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://www.authenticdhowexpeditions.com/beautiful-islands-zanzibar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/beautiful-islands-zanzibar.html"/>
+    <image:image>
+      <image:loc>https://www.authenticdhowexpeditions.com/AERIAL-SANDBAR-HD-no-W-1z.jpg</image:loc>
+      <image:title>Most Beautiful Islands to Visit in Zanzibar</image:title>
+      <image:caption>Most beautiful islands to visit in Zanzibar — Mnemba, Prison Island, Nakupenda, Kwale and more</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ============================================
+       NEW GUIDE: Best Things to Do in Zanzibar — Priority 0.9
+       ============================================ -->
+  <url>
+    <loc>https://www.authenticdhowexpeditions.com/best-things-to-do-zanzibar.html</loc>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.authenticdhowexpeditions.com/best-things-to-do-zanzibar.html"/>
+    <xhtml:link rel="alternate" hreflang="sw" href="https://www.authenticdhowexpeditions.com/best-things-to-do-zanzibar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.authenticdhowexpeditions.com/best-things-to-do-zanzibar.html"/>
+    <image:image>
+      <image:loc>https://www.authenticdhowexpeditions.com/snorkeling-on-zanzibar.jpg</image:loc>
+      <image:title>Best Things to Do in Zanzibar 2026</image:title>
+      <image:caption>Top activities and experiences in Zanzibar — dhow safari, snorkeling, Stone Town, Jozani Forest and more</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ============================================
        GUIDE 1: Zanzibar Dhow Safari Guide — Priority 0.9
        ============================================ -->
   <url>
@@ -128,13 +204,13 @@
   </url>
 
   <!-- ============================================
-       GUIDE 3: Kwale Island Guide — Priority 0.8
+       GUIDE 3: Kwale Island Guide — Priority 0.9
        ============================================ -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/kwale-island-zanzibar-guide.html</loc>
     <lastmod>2026-10-09T20:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <mobile:mobile/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.authenticdhowexpeditions.com/kwale-island-zanzibar-guide.html"/>
     <xhtml:link rel="alternate" hreflang="sw" href="https://www.authenticdhowexpeditions.com/kwale-island-zanzibar-guide.html"/>
@@ -259,35 +335,35 @@
        ============================================ -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#activities</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#booking</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#reviews</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#faq</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#contact</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -297,21 +373,21 @@
        ============================================ -->
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#legal-privacy</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#legal-terms</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://www.authenticdhowexpeditions.com/#legal-safety</loc>
-    <lastmod>2026-10-09T20:00:00+03:00</lastmod>
+    <lastmod>2026-10-16T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
